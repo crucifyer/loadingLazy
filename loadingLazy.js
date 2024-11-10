@@ -11,7 +11,7 @@
 						node.removeAttribute('loading'); // 화면내에 들어오면 css 규칙에서 제외
 						node.addEventListener('animationend', () => {
 							node.classList.remove('__loading_lazy__');
-						});
+						}, {once:true});
 						node.classList.add('__loading_lazy__'); // fade in 효과
 						observer.unobserve(node); // 한번 보이면 더이상의 관찰 불필요
 					})(entry.target);
