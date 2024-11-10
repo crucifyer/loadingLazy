@@ -16,8 +16,7 @@ additional declarations for the fade in effect
     animation: __lazyFadeIn__ 1s ease-in-out forwards;
 }
 ```
-* Note that it touches opacity, so any tags that use loading=lazy and opacity together will always be 1.
-
+* Note that it uses opacity, so if you have a tag that uses loading=lazy and opacity together, it will change to opacity 1 and back.
 
 loading js at the bottom
 ```html
