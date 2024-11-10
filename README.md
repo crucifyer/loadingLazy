@@ -20,8 +20,11 @@ fade in 효과로 부드럽게 나타나게 하려면 추가 선언
 
 최하단에 js 로딩
 ```html
-<script src="https://crucifyer.github.io/js/loadingLazy.min.js"></script>
+<script src="https://crucifyer.github.io/js/loadingLazy.fadeIn.min.js"></script><!-- fade in 이펙트 있는 버전 -->
+<script src="https://crucifyer.github.io/js/loadingLazy.min.js"></script><!-- fade in 이펙트 없는 버전 -->
+<!-- 둘 중 하나만 로딩 -->
 </body>
 ```
+* vuejs 같은 virtual dom 으로 관리되는 경우 이펙트가 있어도 상관은 없으나 다시 그려질 때 마다 이펙트가 발생하므로 없는편이 깔끔함.
 
 example https://framework.xenosi.de/exams/loadingLazy.html
