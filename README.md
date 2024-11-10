@@ -1,11 +1,11 @@
 # loadingLazy
 loading=lazy for background-image
 
-declare in head
+head 에 선언
 ```css
 [loading="lazy"]:not(img,iframe) { background-image: none !important; }
 ```
-additional declarations for the fade in effect
+fade in 효과로 부드럽게 나타나게 하려면 추가 선언
 ```css
 @keyframes __lazyFadeIn__ {
     from { opacity: 0; }
@@ -16,9 +16,9 @@ additional declarations for the fade in effect
     animation: __lazyFadeIn__ 1s ease-in-out forwards;
 }
 ```
-* Note that it uses opacity, so if you have a tag that uses loading=lazy and opacity together, it will change to opacity 1 and back.
+* fade in 효과를 줄 때 opacity:1 까지 가므로, opacity 를 다르게 주었을 경우 깜빡이게 느낄 수 있음.
 
-loading js at the bottom
+최하단에 js 로딩
 ```html
 <script src="https://crucifyer.github.io/js/loadingLazy.min.js"></script>
 </body>
